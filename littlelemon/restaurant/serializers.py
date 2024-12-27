@@ -3,7 +3,7 @@ from rest_framework import serializers
 class MenuSerializer(serializers.ModelSerializer):
     class Meta:
         model = Menu
-        fields = ['url', 'username', 'email', 'groups'] 
+        fields = ['Title', 'Price', 'inventory'] 
     
 class BookingSerializer(serializers.ModelSerializer):
     class Meta:
