@@ -10,18 +10,25 @@ The web app includes:
 Navigate to the project folder and create a virtual environment:
 
 cd Little-Lemon-Web-Application
+```md
 python3 -m venv venv
+```
+```md
 source venv/bin/activate  # For macOS/Linux
+```
+```md
 venv\Scripts\activate  # For Windows
+```
 Then, install the required dependencies:
 
+```md
 pip install -r requirements.txt
-
+```
 ### 2. Set Up Database Credentials
 In your project, the database connection settings are defined in the settings.py file. You will need to set up your MySQL credentials in this file.
 
 Open restaurant/settings.py and update the DATABASES section with your MySQL credentials:
-
+```md
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -32,18 +39,19 @@ DATABASES = {
         'PORT': '3306',
     }
 }
+```
 Make sure your MySQL server is running and accessible.
 
 ### 3. Run Migrations
 Once your database is configured, you need to apply the migrations to set up the database schema:
-
+```md
 python manage.py migrate
-
+```
 ### 4. Ensure Djoser Is Installed
 Djoser should already be included in the requirements.txt file, but if it's missing, you can install it by running:
-
+```md
 pip install djoser
-
+```
 ### 5. Create Super Admin and Token for Authentication
 To create a superuser (admin) and obtain a token for authentication, follow these steps:
 
@@ -65,8 +73,9 @@ The response will include a token that you need to include in the Authorization 
 
 ### 6. Running the Development Server
 To run the application locally, use the Django development server:
-
+```md
 python manage.py runserver
+```
 Visit http://127.0.0.1:8000/ to interact with the application.
 
 ## API Endpoints
