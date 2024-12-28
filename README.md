@@ -5,12 +5,8 @@ This web application utilizes Django, Django Rest Framework (DRF), Djoser, and M
 The web app includes:
 ## Setup Instructions
 
-### 1. Clone the Repository
-First, clone the project to your local machine:
 
-git clone git@github.com:joaomnarciso/Little-Lemon-Web-Application.git
-
-### 2. Install Dependencies
+### 1. Install Dependencies
 Navigate to the project folder and create a virtual environment:
 
 cd Little-Lemon-Web-Application
@@ -21,7 +17,7 @@ Then, install the required dependencies:
 
 pip install -r requirements.txt
 
-### 3. Set Up Database Credentials
+### 2. Set Up Database Credentials
 In your project, the database connection settings are defined in the settings.py file. You will need to set up your MySQL credentials in this file.
 
 Open restaurant/settings.py and update the DATABASES section with your MySQL credentials:
@@ -38,17 +34,17 @@ DATABASES = {
 }
 Make sure your MySQL server is running and accessible.
 
-### 4. Run Migrations
+### 3. Run Migrations
 Once your database is configured, you need to apply the migrations to set up the database schema:
 
 python manage.py migrate
 
-### 5. Ensure Djoser Is Installed
+### 4. Ensure Djoser Is Installed
 Djoser should already be included in the requirements.txt file, but if it's missing, you can install it by running:
 
 pip install djoser
 
-### 6. Create Super Admin and Token for Authentication
+### 5. Create Super Admin and Token for Authentication
 To create a superuser (admin) and obtain a token for authentication, follow these steps:
 
 Create a superuser by running:
@@ -67,7 +63,7 @@ Payload:
 }
 The response will include a token that you need to include in the Authorization header for subsequent requests.
 
-### 7. Running the Development Server
+### 6. Running the Development Server
 To run the application locally, use the Django development server:
 
 python manage.py runserver
